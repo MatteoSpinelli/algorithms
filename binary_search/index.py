@@ -1,4 +1,5 @@
 # implementantion of the binary search algorithm
+# the complexity is O(log n)
 
 arr = [i for i in range(100)]
 
