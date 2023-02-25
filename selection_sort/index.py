@@ -8,7 +8,7 @@ arr = [12,6,19,100,1,0,240,758,-12,-345]
 # 4. repeat for every element of the array
 
 def findSmallestValue(arr):
-    # return the index and the element of the smallest element of the array
+    # return the index of the smallest element of the array
     min = None
     indexMin = 0
     for i, el in enumerate(arr):
