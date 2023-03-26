@@ -8,17 +8,13 @@
 # then call the quicksort on both the lists
 
 import random
+import time
 
-arr = [1,1,1,1,4,4,4,4,2,2,2,5,5,5]
+arr = [1,34,67,12,2,0,-1,90]
 random.shuffle(arr)
-
 def quicksort(list):
     # implement the quicksort algorithm, with a random pivot
     if len(list) < 2:
-        return list
-    if len(list) == 2:
-        if list[0] > list[1]:
-            return [list[1], list[0]]
         return list
     # recurive case
     pivot = random.choice(list)
@@ -26,6 +22,7 @@ def quicksort(list):
     sub_list.remove(pivot)
     sup_list = [i for i in list if i > pivot]
     return quicksort(sub_list) + [pivot] + quicksort(sup_list)
+
 
 
 
