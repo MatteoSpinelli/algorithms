@@ -60,10 +60,25 @@ class Hash_map:
 
         print(self.hash_table)
 
+    def get_val(self, key, default = None):
+        index = hash(key) % self.size
+        for item in self.hash_table[index]:
+            if item[0] == key:
+                return item[1]
+        return default
+        
+    
+    
+    def __str__(self) -> str:
+        return str(self.hash_table)
 
-hash_map = Hash_map(4)
-for i in range(1000):
-    hash_map.set_val(random.randint(0, 1000), random.randint(0, 1000))
+hash_map = Hash_map(16)
+hash_map.set_val("apple", "1Euro")
+hash_map.set_val("brodo", "1Euro")
+hash_map.set_val("pane", "1Euro")
+hash_map.set_val("radicchio", "100Euro")
+hash_map.get_val("radicchio")
+
 
             
     
